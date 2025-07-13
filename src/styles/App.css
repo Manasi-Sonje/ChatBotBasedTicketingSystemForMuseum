@@ -25,10 +25,70 @@ body {
   text-align: center;
 }
 
+/* App Header */
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info span {
+  font-size: 1rem;
+  color: white;
+}
+
+.logout-button {
+  background: linear-gradient(135deg, #ff3e6b, #ff758c);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(255, 62, 107, 0.3);
+}
+
+/* Chatbot Page */
+.chatbot-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Chatbot Styles - Increased size */
 .chatbot {
   width: 80vw;  /* Increased width */
-  height: 85vh; /* Increased height */
+  height: 75vh; /* Adjusted height for header */
   max-width: 1000px;
   background: linear-gradient(135deg, #ff7eb3, #ff758c);
   border-radius: 20px;
@@ -37,6 +97,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 30px;
+  margin-top: 80px; /* Add margin for fixed header */
 }
 
 /* Chatbox (increased height) */
