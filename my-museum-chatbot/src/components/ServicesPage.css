@@ -1,0 +1,264 @@
+/* Services Container */
+.services-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  padding: 40px 20px;
+}
+
+/* Services Header */
+.services-header {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.services-header p {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.back-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ff7eb3;
+  transform: translateY(-2px);
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+}
+
+/* Service Card */
+.service-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.service-card.primary {
+  border-color: rgba(255, 126, 179, 0.3);
+}
+
+.service-card.secondary {
+  border-color: rgba(255, 62, 107, 0.3);
+}
+
+.service-card.tertiary {
+  border-color: rgba(255, 193, 7, 0.3);
+}
+
+.service-card.primary:hover {
+  border-color: #ff7eb3;
+  box-shadow: 0 20px 40px rgba(255, 126, 179, 0.2);
+}
+
+.service-card.secondary:hover {
+  border-color: #ff3e6b;
+  box-shadow: 0 20px 40px rgba(255, 62, 107, 0.2);
+}
+
+.service-card.tertiary:hover {
+  border-color: #ffc107;
+  box-shadow: 0 20px 40px rgba(255, 193, 7, 0.2);
+}
+
+/* Service Icon */
+.service-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Service Content */
+.service-content h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c5364;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.service-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Service Features */
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-features li {
+  padding: 8px 0;
+  color: #2c5364;
+  position: relative;
+  padding-left: 25px;
+}
+
+.service-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff7eb3;
+  font-weight: bold;
+}
+
+/* Service Action */
+.service-action {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e1e5e9;
+}
+
+.service-action span {
+  color: #ff7eb3;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Services Footer */
+.services-footer {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-info {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-info h3 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.contact-method span:first-child {
+  font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-container {
+    padding: 20px 15px;
+  }
+  
+  .services-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .services-header p {
+    font-size: 1.1rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .service-card {
+    padding: 25px 20px;
+  }
+  
+  .service-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-info {
+    padding: 30px 20px;
+  }
+  
+  .contact-methods {
+    gap: 10px;
+  }
+  
+  .contact-method {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-header h1 {
+    font-size: 2rem;
+  }
+  
+  .service-card {
+    padding: 20px 15px;
+  }
+  
+  .service-icon {
+    font-size: 3rem;
+  }
+} 
